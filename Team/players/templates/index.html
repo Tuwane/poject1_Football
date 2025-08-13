@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+{% block title %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<header>	
+	<h1>Vall Ecoes Football Club -List of all Players</h1>
+</header>
+{% endblock%}
+
+{% block content %}
+<pp><a href="/">HOME</a></p>
+<h1>Players</h1>
+	<ol>
+		{% for x in myplayers %}
+		<li><a href="details.html/{{ x.di}}">{{ x.firstname }} {{ x.lastname }}</a></li>
+		{% endfor %}
+	</ol>
+{% endblock %}

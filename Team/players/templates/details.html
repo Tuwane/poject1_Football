@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+{% block title %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+Details about {{ myplayers.firstname }} {{ myplayers.lastname}}
+{% endblock %}
+
+{% block content %}
+<h1>{{ myplayers.firstname }} {{ myplayers.lastname }}</h1>
+
+        <p>Phone: {{ myplayers.phone }} </p>
+        <p>Member since: {{ myplayers.joined_date }}</p>
+        <p>Age :{{myplayers.age}}</p>
+        <p>Email :{{myplayers.email}}</p>
+        <p>Address :{{myplayers.address}}</p>
+
+        <p>Back to <a href="/players">Players</a></p>
+{% endblock%}
